@@ -1,0 +1,112 @@
+.app {
+	font-family: Lato;
+}
+
+.warrning-message, .error-message {
+	text-transform: uppercase;
+	font-size: 4rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	width: 100%;
+
+	@media (max-width: 576px) {
+		padding: 0 5px;
+        font-size: 2rem;
+      }
+  
+  }
+  
+  
+  // Animation: 
+  
+  .blinking{
+	animation:blinkingText 0.66s infinite;
+  }
+  
+  
+  @keyframes blinkingText{
+	0% {color: rgb(141, 24, 24);}
+	50% {color: transparent;}
+	100% {color: rgb(141, 24, 24);}
+  }
+  
+
+  .wave {
+	width: 1rem;
+	height: 6rem;
+	background: linear-gradient(45deg, cyan, #fff);
+	margin: 1rem;
+	animation: wave 1s linear infinite;
+	border-radius: 2rem;
+  }
+
+  .wave:nth-child(2) {
+	animation-delay: 0.1s;
+  }
+  .wave:nth-child(3) {
+	animation-delay: 0.2s;
+  }
+  .wave:nth-child(4) {
+	animation-delay: 0.3s;
+  }
+  .wave:nth-child(5) {
+	animation-delay: 0.4s;
+  }
+  .wave:nth-child(6) {
+    animation-delay: 0.5s;
+  }
+ 
+  
+
+
+
+  @keyframes wave {
+	0% {
+	  transform: scale(0);
+	}
+	50% {
+	  transform: scale(1);
+	}
+	100% {
+	  transform: scale(0);
+	}
+  }
+
+
+
+  // utility class
+
+  .white-text {
+	color: white;
+  }
+  
+  .center {
+	height: 80vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #000;
+	position: relative;
+  }
+ 
+.mr-xs {
+	margin-right: 12px;
+}
+
+
+
+footer{
+	background-color: black;
+	min-height: 20px;
+}
+
+.dot {
+	display:block;
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+	background-color: #676767;
+	margin: 0px 20px 20px auto;
+}
