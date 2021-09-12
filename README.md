@@ -1,2 +1,2 @@
 # Events-App
-# The Project
+## The Project
