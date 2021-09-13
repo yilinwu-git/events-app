@@ -6,6 +6,7 @@ var app = express();
 app.use(cors());
 app.options('*', cors());
 app.use('/api/graphql', graphql);
+
 /*
 app.use('/graphql', graphqlHTTP({
     schema: schema,
@@ -13,5 +14,6 @@ app.use('/graphql', graphqlHTTP({
     graphiql: true,
 }));
 */
+
 const port = process.env.PORT || 8080;
 app.listen(port, () => console.log(`GraphQL API Server running on ${port}, http://localhost:${port}`));
