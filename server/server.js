@@ -1,10 +1,11 @@
 var cors = require('cors');
 var express = require('express');
+var graphql = require("./api/graphql");
 
 var app = express();
 app.use(cors());
 app.options('*', cors());
-app.use('/api/graphql');
+app.use('/api/graphql', graphql);
 /*
 app.use('/graphql', graphqlHTTP({
     schema: schema,

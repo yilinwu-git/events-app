@@ -5,7 +5,7 @@ import App from './App';
 import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
 
 const client = new ApolloClient({
-  uri: 'https://events-app-server.vercel.app:4000/graphql',
+  uri: 'https://events-app-server.vercel.app/graphql',
   cache: new InMemoryCache()
 });
 
