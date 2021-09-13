@@ -65,7 +65,7 @@ var root = {
 
 var router = express.Router();
 
-router.get("/", graphqlHTTP({
+router.get("/api/graphiql", graphqlHTTP({
     schema: schema,
     rootValue: root,
     graphiql: true,
