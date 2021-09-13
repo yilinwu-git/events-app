@@ -63,7 +63,6 @@ var root = {
 };
 
 
-
 var app = express();
 app.use(cors());
 app.options('*', cors());
@@ -72,5 +71,6 @@ app.use('/graphql', graphqlHTTP({
     rootValue: root,
     graphiql: true,
 }));
-app.listen(4000);
-console.log('Running a GraphQL API server at http://localhost:4000/graphql');
+
+const port = process.env.PORT || 4000;
+app.listen(port, () => console.log(`GraphQL API Server running on ${port}, http://localhost:${port}`));
